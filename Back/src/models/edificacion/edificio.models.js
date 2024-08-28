@@ -7,6 +7,10 @@ const Edificio = conexionDB.define("edificio", {
     primaryKey: true,
     autoIncrement: true,
   },
+  ubicacion: {
+    type: DataTypes.STRING,
+    allowNull: null,
+  },
   pisos: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -15,8 +19,12 @@ const Edificio = conexionDB.define("edificio", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  espacioPublico: {
+  vendedor: {
     type: DataTypes.INTEGER,
+    references: {
+      model: "Vendedor",
+      key: "id",
+    },
     allowNull: false,
   },
   videoPresentacion: {

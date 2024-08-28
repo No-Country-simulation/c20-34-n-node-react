@@ -7,7 +7,19 @@ const Depto = conexionDB.define("depto", {
     primaryKey: true,
     autoIncrement: true,
   },
-  hambientes: {
+  numeroDepto: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  precio: {
+    type: DataTypes.FLOAT,
+    allowNull: false,
+  },
+  dimensiones: {
+    type: DataTypes.JSON,
+    allowNull: false,
+  },
+  ambientes: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
@@ -22,6 +34,26 @@ const Depto = conexionDB.define("depto", {
   disponibilidad: {
     type: DataTypes.ENUM,
     value: ["Disponible", "Reservado", "Vendido"],
+    allowNull: false,
+  },
+  videoPresentacion: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  piso: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: "Edificio",
+      key: "id",
+    },
+    allowNull: false,
+  },
+  edificioId: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: "Edificio",
+      key: "id",
+    },
     allowNull: false,
   },
 });
