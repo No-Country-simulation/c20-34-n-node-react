@@ -11,14 +11,20 @@ const Vendedor = conexionDB.define("vendedor", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  contacto: {
-    type: DataTypes.INTEGER,
+  apellido: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
-  redSocial: {
-    type: DataTypes.TEXT,
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  password: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });
 
-module.exports = Vendedor;
+module.exports = {
+  Vendedor,
+};
