@@ -23,6 +23,14 @@ const Vendedor = conexionDB.define("vendedor", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  rol: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  verificado: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+  },
 });
 
 module.exports = {
