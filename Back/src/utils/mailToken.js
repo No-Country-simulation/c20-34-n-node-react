@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 require("dotenv").config();
 
+//creando el transportador que permite mandar el email
 let transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: 587,
@@ -11,6 +12,7 @@ let transporter = nodemailer.createTransport({
   },
 });
 
+//definiendo la info del email que se enviará
 async function enviarMailVerificacion(direccion, token) {
   return await transporter.sendMail({
     from: '"c20-34-n-node-react" <no_reply_verification1@outlook.com>',
@@ -20,6 +22,7 @@ async function enviarMailVerificacion(direccion, token) {
   });
 }
 
+//estructura del cuerpo del email
 function crearMailVerificacion(token) {
   return `
   <!DOCTYPE html>
@@ -42,7 +45,7 @@ function crearMailVerificacion(token) {
     <h1>Verificación de correo electrónico - c20-34-n-node-react</h1>
     <p>Se ha creado una cuenta en c20-34-n-node-react con este correo electrónico.</p>
       <p>Si esta cuenta no fue creada por usted, ignore este mensaje.</p>
-      <p></p>Si usted creó la cuenta, entonces verifique la cuenta <a href="http://localhost:4000/${token}" target="_blank" rel="noopener noreferrer">haciendo click aquí</a>.</p>
+      <p></p>Si usted creó la cuenta, entonces verifique la cuenta <a href="http://localhost:3001/verificar/${token}" target="_blank" rel="noopener noreferrer">haciendo click aquí</a>.</p>
       <p><strong>Simulación laboral</strong></p>
       <p>No-country</p>
   </body>
