@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const NewProperty = () => {
     // Estado para el número de pasos
     const [steps, setSteps] = useState(1);
+    const [floors, setFloors] = useState(0);
 
     // Función que maneja el cambio de pasos
     const handleStepsChange = (e) => {
@@ -18,9 +19,9 @@ const NewProperty = () => {
             const label = String.fromCharCode(65 + i); // Convierte 0 a 'A', 1 a 'B', etc.
             fileInputs.push(
                 <div key={`image-${label}`}>
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor={`file_input_image_${label}`}>Initial view - {label}</label>
-                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id={`file_input_image_${label}`} type="file" />
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">Image (.jpg o .png) / Video (.mp4) (RES. 1920x1080px).</p>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor={`file_input_image_${label}`}>Initial view - {label}</label>
+                    <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id={`file_input_image_${label}`} type="file" />
+                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">Image (.jpg o .png) / Video (.mp4) (RES. 1920x1080px).</p>
                 </div>
             );
         }
@@ -31,9 +32,9 @@ const NewProperty = () => {
             const to = String.fromCharCode(65 + i + 1);
             fileInputs.push(
                 <div key={`animation-${from}-${to}`}>
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor={`file_input_anim_${from}_${to}`}>Animation {from}-{to}</label>
-                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id={`file_input_anim_${from}_${to}`} type="file" />
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">Animation file (.mp4)</p>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor={`file_input_anim_${from}_${to}`}>Animation {from}-{to}</label>
+                    <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id={`file_input_anim_${from}_${to}`} type="file" />
+                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">Animation file (.mp4)</p>
                 </div>
             );
         }
@@ -44,9 +45,9 @@ const NewProperty = () => {
             const to = String.fromCharCode(65 + i - 1);
             fileInputs.push(
                 <div key={`animation-${from}-${to}-reverse`}>
-                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor={`file_input_anim_${from}_${to}_reverse`}>Animation {from}-{to} (reverse)</label>
-                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id={`file_input_anim_${from}_${to}_reverse`} type="file" />
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300">Animation file (.mp4)</p>
+                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor={`file_input_anim_${from}_${to}_reverse`}>Animation {from}-{to} (reverse)</label>
+                    <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id={`file_input_anim_${from}_${to}_reverse`} type="file" />
+                    <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">Animation file (.mp4)</p>
                 </div>
             );
         }
@@ -71,7 +72,7 @@ const NewProperty = () => {
                         <div>
                             <label htmlFor="category" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
                             <select id="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Select category</option>
+                                <option defaultValue="">Select category</option>
                                 <option value="H">Housing / Community</option>
                                 <option value="T">Tower</option>
                                 <option value="MT">Multi-Tower</option>
@@ -95,17 +96,43 @@ const NewProperty = () => {
                     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                     <h3 className="mb-4 font-bold text-gray-900 dark:text-white">Property Assets</h3>
 
+                    <div key="intro">
+                        <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="intro">Intro / Main view</label>
+                        <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="" type="file" />
+                        <p className="mt-1 text-sm text-gray-500 dark:text-gray-300">Image (.jpg o .png) / Video (.mp4) (RES. 1920x1080px).</p>
+                    </div>
+
+                    <h3 className="my-4 font-bold text-gray-900 dark:text-white">Aerial view / 360 spin</h3>
+
                     {/* Número de pasos */}
-                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="steps">Number of Steps</label>
-                    <select id="steps" value={steps} onChange={handleStepsChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 mb-4">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
+                    <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                        <div>
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="steps">Number of Steps</label>
+                            <select id="steps" value={steps} onChange={handleStepsChange} className="mb-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <option defaultValue="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
 
                     {/* Inputs de archivos dinámicos */}
                     {renderFileInputs()}
+
+                    <h3 className="my-4 font-bold text-gray-900 dark:text-white">Floorplans</h3>
+                    <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                        <div className="w-full">
+                            <label htmlFor="floorNumber" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Number of Floors</label>
+                            <input type="number" name="floorNumber" id="floorNumber" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="1" required="" />
+                        </div>
+                    </div>
+
+                    <div className="my-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="multiple_files">Upload multiple files</label>
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" multiple />
+                        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Image (.jpg o .png) - (RES. 1920x1080px).</p>
+                    </div>
 
                     {/* Botón de enviar */}
                     <button type="submit" className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
