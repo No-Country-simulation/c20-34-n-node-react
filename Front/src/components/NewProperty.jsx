@@ -134,6 +134,69 @@ const NewProperty = () => {
                         <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Image (.jpg o .png) - (RES. 1920x1080px).</p>
                     </div>
 
+                    <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <h3 className="mb-4 font-bold text-gray-900 dark:text-white">Unit Types</h3>
+
+                    <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                        <div className="my-4">
+                            <label htmlFor="unitType" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unit Type Name</label>
+                            <input type="text" name="unitTypeName" id="unitTypeName" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Unit Type Name" required="" />
+                        </div>
+                        <div className="my-4">
+                            <label htmlFor="totalArea" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Total Area</label>
+                            <input type="number" name="totalArea" id="totalArea" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Area in sqft" required="" />
+                        </div>
+                        <div className="my-4">
+                            <label htmlFor="bedroomsNum" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Number of Bedrooms</label>
+                            <input type="number" name="bedroomsNum" id="bedroomsNum" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type number of Bedrooms" required="" />
+                        </div>
+                        <div className="my-4">
+                            <label htmlFor="bathroomsNum" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Number of Bathrooms</label>
+                            <input type="number" name="bathroomsNum" id="bathroomsNum" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type number of Bathrooms" required="" />
+                        </div>
+
+                        <div className="my-4 sm:col-span-2">
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="multiple_files">Images for Gallery</label>
+                            <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="multiple_files" type="file" multiple />
+                            <p className="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Image (.jpg o .png) - (RES. 1920x1080px).</p>
+                        </div>
+
+                        <div className="sm:col-span-2">
+                            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">360 Virtual Tour</label>
+                            <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file"/>
+                            <p className="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">ZIP file.</p>
+                        </div>
+                    </div>
+
+                    <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                    <h3 className="mb-4 font-bold text-gray-900 dark:text-white">Unit</h3>
+
+                    <div className="grid gap-4 sm:grid-cols-4 sm:gap-6">
+                        <div className="my-4">
+                            <label htmlFor="unitFloor" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Floor</label>
+                            <input type="number" name="unitFloor" id="unitFloor" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Floor Number" required="" />
+                        </div>
+                        <div className="my-4">
+                            <label htmlFor="bathroomsNum" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                            <select id="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <option defaultValue="amenitie">Amenity / Common Space</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="residential">Residential</option>
+                            </select>
+                        </div>
+                        <div className="my-4">
+                            <label htmlFor="bedroomsNum" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unit Type</label>
+                            <select id="category" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <option defaultValue="">Select Type</option>
+                                <option value="Add type">Add Type</option>
+                            </select>
+                        </div>
+                        <div className="my-4">
+                            <label htmlFor="unitPrice" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Price</label>
+                            <input type="number" name="unitPrice" id="unitPrice" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type Price" required="" />
+                        </div>
+                    </div>
+
                     {/* Botón de enviar */}
                     <button type="submit" className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
                         Add Property
