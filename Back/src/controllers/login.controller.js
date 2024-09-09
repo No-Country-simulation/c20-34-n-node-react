@@ -3,7 +3,6 @@ const { validation } = require("../utils/validation");
 const bcrypt = require("bcrypt");
 const jsonwebtoken = require("jsonwebtoken");
 require("dotenv").config();
-const bcryptjs = require("bcryptjs");
 
 loginController = async (req, res) => {
   ///
@@ -37,16 +36,8 @@ loginController = async (req, res) => {
       return res.status(400).json({ message: "Error durante el login" });
     }
 
-    //encriptacion password
-    const hashedPass = await bcryptjs.hash(password, 10);
-    console.log("passwordEncriptadoRecibidoFront " + hashedPass);
-    console.log("PasswordDB " + usuario[0].password);
-
     //comparacion de passwords
-    const passwordEquals = await bcrypt.compare(
-      hashedPass,
-      usuario[0].password
-    );
+    const passwordEquals = await bcrypt.compare(password, usuario[0].password);
 
     //respuesta a una cuenta no verificada
     if (!usuario[0].verificado) {
