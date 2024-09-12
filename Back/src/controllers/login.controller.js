@@ -55,7 +55,7 @@ loginController = async (req, res) => {
 
     //generacion de token
     const tokenVerificacion = jsonwebtoken.sign(
-      { email: email },
+      { email: email, verificado: usuario[0].verificado },
       process.env.JWT_SECRET,
       { expiresIn: process.env.JWT_EXPIRATION }
     );
@@ -64,7 +64,7 @@ loginController = async (req, res) => {
       expires: new Date(
         Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 100
       ),
-      path: "/",
+      path: "/login",
     };
 
     res.cookie("jwt", tokenVerificacion, cookieOption);
