@@ -17,6 +17,22 @@ const server = async () => {
 
 server();
 
+/*{
+  "numeroDepto": "101",
+  "precio": 150000,
+  "dimensiones": "80m²",
+  "ambientes": 3,
+  "habitaciones": 2,
+  "baños": 1,
+  "disponibilidad": "disponible",
+  "videoPresentacion": [
+    { "url": "http://localhost:3000/src/Assets/02 Spin 360/0-120.mp4", "tipo": "video" }
+  ],
+  "piso": 5,
+  "edificioId": 1
+}
+ */
+
 /*
 EN EL ARCHIVO CONEXIONDB, USAS .ENV O PONES ENTRE COMILLAS EL USUARIO, CONTRASEÑA Y NOMBRE DE LA DB QUE CREASTE PARA TU COMPUTADORA
 
