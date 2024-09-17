@@ -10,7 +10,7 @@
     height: 45px;
     padding: .7%;
     background: rgba(0, 0, 0, .2);
-    z-index: 3;
+    z-index: 15;
   }
   
   .menuIcon {
@@ -25,7 +25,7 @@
     background: white;
     height: 100dvh;
     width: 300px;
-    z-index: 10;
+    z-index: 25;
   }
   
   .menu-in {
@@ -35,7 +35,7 @@
     background: white;
     height: 100dvh;
     width: 300px;
-    z-index: 10;
+    z-index: 25;
     animation: menuIn .4s ease-out;
   }
   
@@ -51,7 +51,7 @@
     background: white;
     height: 100dvh;
     width: 300px;
-    z-index: 10;
+    z-index: 25;
     animation: menuOut .4s ease-in;
   }
   
