@@ -6,10 +6,10 @@ import NewProperty from '../pages/NewPropertyPage';
 import ContactPage from '../pages/ContactPage';
 import Development from '../pages/DevelopmentPage'
 
-
 function Routes() {
   return (
-    <Switch>
+    <div>
+      <Switch>
       <Route path="/" component={Home} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
@@ -18,6 +18,7 @@ function Routes() {
       <Route path="/development" component={Development} />
       <Route>404, Not Found!</Route>
     </Switch>
+    </div>
   );
 }
 
