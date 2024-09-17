@@ -1,0 +1,144 @@
+{
+    "floors": [
+        {
+            "name": "Piso 1",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 01.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 01.jpg"
+        },
+        {
+            "name": "Piso 2",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 02.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 02.jpg"
+        },
+        {
+            "name": "Piso 3",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 03.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 03.jpg"
+        },
+        {
+            "name": "Piso 4",
+            "src": "../src/assets/floorsImagenImagen/1550 Lamar St-Building_Level 04.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 04.jpg"
+        },
+        {
+            "name": "Piso 5",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 05.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 05.jpg"
+        },
+        {
+            "name": "Piso 6",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 06.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 06.jpg"
+        },
+        {
+            "name": "Piso 7",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 07.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 07.jpg"
+        },
+        {
+            "name": "Piso 8",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 08.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 08.jpg"
+        },
+        {
+            "name": "Piso 9",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 09.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 09.jpg"
+        },
+        {
+            "name": "Piso 10",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 10.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 10.jpg"
+        },
+        {
+            "name": "Piso 11",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 11.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 11.jpg"
+        },
+        {
+            "name": "Piso 12",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 12.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 12.jpg"
+        },
+        {
+            "name": "Piso 14",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 14.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 14.jpg"
+        },
+        {
+            "name": "Piso 15",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 15.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 15.jpg"
+        },
+        {
+            "name": "Piso 16",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 16.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 16.jpg"
+        },
+        {
+            "name": "Piso 17",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 17.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 17.jpg"
+        },
+        {
+            "name": "Piso 18",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 18.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 18.jpg"
+        },
+        {
+            "name": "Piso 19",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 19.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 19.jpg"
+        },
+        {
+            "name": "Piso 20",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 20.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 20.jpg"
+        },
+        {
+            "name": "Piso 21",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 21.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 21.jpg"
+        },
+        {
+            "name": "Piso 22",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 22.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 22.jpg"
+        },
+        {
+            "name": "Piso 23",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 23.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 23.jpg"
+        },
+        {
+            "name": "Piso 24",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 24.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 24.jpg"
+        },
+        {
+            "name": "Piso 25",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 25.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 25.jpg"
+        },
+        {
+            "name": "Piso 26",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 26.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 26.jpg"
+        },
+        {
+            "name": "Piso 27",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 27.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 27.jpg"
+        },
+        {
+            "name": "Piso 28",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 28.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 28.jpg"
+        },
+        {
+            "name": "Piso 29",
+            "src": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 29.jpg",
+            "thumbnail": "../src/assets/floorsImagen/1550 Lamar St-Building_Level 29.jpg"
+        }
+    ]
+}
