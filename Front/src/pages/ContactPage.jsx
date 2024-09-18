@@ -14,10 +14,10 @@ const ContactPage = () => {
       <div className="contact-form-section">
         <div className="contact-info">
           <h2>Contact</h2>
-          <p><FontAwesomeIcon icon={faPhone} /> +1-302-480-6960 (WhatsApp)</p>
-          <p><FontAwesomeIcon icon={faPhone} /> +1-302-480-6960</p>
-          <p><FontAwesomeIcon icon={faEnvelope} /> info@3dus.us</p>
-          <p><FontAwesomeIcon icon={faGlobe} /> 3DUS</p>
+          <p><FontAwesomeIcon icon={faPhone} /> +1-302-123-0000 (WhatsApp)</p>
+          <p><FontAwesomeIcon icon={faPhone} /> +1-302-123-0000</p>
+          <p><FontAwesomeIcon icon={faEnvelope} /> info@proptech.us</p>
+          <p><FontAwesomeIcon icon={faGlobe} /> PropTech</p>
         </div>
         <p>Do you have any questions?</p>
         <ContactForm />
