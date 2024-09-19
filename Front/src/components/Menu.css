@@ -63,7 +63,7 @@
   .menu-head {
     width: 100%;
     border-bottom: 1px solid lightgrey;
-    min-height: 60px;
+    min-height: 70px;
     display: flex;
     justify-content: flex-end;
     align-items: center;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fligthToTop from '../assets/Video/flight to top.mp4';
+import { HiOutlineX } from "react-icons/hi";
 import { fetchBuildData } from '../mock';
 
 const FloorsPage = () => {
@@ -35,15 +36,27 @@ const FloorsPage = () => {
                 <div className="flex absolute top-0 left-0 w-full h-full">
                     <div className='z-0'>
                         <img
-                            key= {floor}
+                            key={floor}
                             className='absolute top-0 left-0 w-full h-full object-cover'
-                            src={data.floors[floor-1].img}
+                            src={data.floors[floor - 1].img}
                             alt=''
                         />
                     </div>
                     <div id='floors' className='relative top-0 bg-white w-[300px] z-10'>
-                        <h2 className='text-black'>Pisos</h2>
-                        {}
+                        <div className='min-h-[70px] flex justify-end border-b-slate-200 border-b-[1px]'>
+                            <button className='bg-transparent text-black'>
+                                <HiOutlineX className='' />
+                            </button>
+                        </div>
+                        <div className='menuBody max-h-[calc(100vh-70px)] overflow-y-auto'>
+                            {
+                                data.floors.map(item => (
+                                    <div className='text-black'>
+                                        {item.name}
+                                    </div>
+                                ))
+                            }
+                        </div>
                     </div >
                 </div>
             )}
