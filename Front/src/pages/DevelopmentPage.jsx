@@ -23,7 +23,7 @@ const Development = () => {
 
     return (
         <div className="flex h-screen">
-            {!showFloors ? (
+            {/* {!showFloors ? (
                 <MainView
                     mediaUrl={data.mainMediaUrl}
                     isVideo={data.isVideo}
@@ -51,7 +51,7 @@ const Development = () => {
                         {selectedImageUrl && <View3d imageUrl={selectedImageUrl} />}
                     </div>
                 </>
-            )}
+            )} */}
         </div>
     );
 };
