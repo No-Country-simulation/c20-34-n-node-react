@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import fligthToTop from '../assets/Video/flight to top.mp4';
 import { HiOutlineX } from "react-icons/hi";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { fetchBuildData } from '../mock';
+import { fetchBuildData } from '../data/mock';
 
 const FloorsPage = () => {
     const [videoFinished, setVideoFinished] = useState(false);
