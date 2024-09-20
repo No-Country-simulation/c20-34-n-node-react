@@ -25,9 +25,9 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
+    <form onSubmit={handleSubmit} className="text-black contact-form overflow-y-auto">
       <div className="form-group">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Nombre</label>
         <input
           type="text"
           id="name"
@@ -51,7 +51,7 @@ const ContactForm = () => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="phone">Phone</label>
+        <label htmlFor="phone">Telefono</label>
         <input
           type="tel"
           id="phone"
@@ -62,7 +62,7 @@ const ContactForm = () => {
         />
       </div>
 
-      <div className="form-group">
+      {/* <div className="form-group">
         <label htmlFor="inquiry">I am requesting more information to</label>
         <select
           id="inquiry"
@@ -76,10 +76,10 @@ const ContactForm = () => {
           <option value="service">Service Inquiry</option>
           <option value="other">Other</option>
         </select>
-      </div>
+      </div> */}
 
       <div className="form-group">
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">Mensaje</label>
         <textarea
           id="message"
           name="message"
@@ -103,7 +103,7 @@ const ContactForm = () => {
         </label>
       </div>
 
-      <button type="submit" className="submit-button">Send</button>
+      <button type="submit" className="submit-button">Enviar</button>
     </form>
   );
 };
