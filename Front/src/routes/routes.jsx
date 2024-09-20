@@ -5,6 +5,7 @@ import Register from '../pages/RegisterPage';
 import NewProperty from '../pages/NewPropertyPage';
 import ContactPage from '../pages/ContactPage';
 import Development from '../pages/DevelopmentPage';
+import floorsPage from '../pages/FloorsPage';
 import Building from '../pages/BuildingPage';
 
 function Routes() {
@@ -16,7 +17,7 @@ function Routes() {
       <Route path="/register" component={Register} />
       <Route path="/new-property" component={NewProperty} />
       <Route path="/building" component={Building} />
-      <Route path="/development" component={Development} />
+      <Route path="/development" component={floorsPage} />
       <Route path="/contact" component={ContactPage} />
       <Route>404, Not Found!</Route>
     </Switch>

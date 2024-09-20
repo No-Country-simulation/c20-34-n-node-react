@@ -13,13 +13,13 @@ const ContactPage = () => {
       </div>
       <div className="contact-form-section">
         <div className="contact-info">
-          <h2>Contact</h2>
-          <p><FontAwesomeIcon icon={faPhone} /> +1-302-123-0000 (WhatsApp)</p>
+          <h2 className='text-black'>Contacto</h2>
+          {/* <p><FontAwesomeIcon icon={faPhone} /> +1-302-123-0000 (WhatsApp)</p> */}
           <p><FontAwesomeIcon icon={faPhone} /> +1-302-123-0000</p>
           <p><FontAwesomeIcon icon={faEnvelope} /> info@proptech.us</p>
           <p><FontAwesomeIcon icon={faGlobe} /> PropTech</p>
         </div>
-        <p>Do you have any questions?</p>
+        <p>Déjenos su consulta</p>
         <ContactForm />
       </div>
     </div>
