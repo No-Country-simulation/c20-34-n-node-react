@@ -7,6 +7,7 @@ import ContactPage from '../pages/ContactPage';
 import Development from '../pages/DevelopmentPage';
 import floorsPage from '../pages/FloorsPage';
 import Building from '../pages/BuildingPage';
+import UnitPage from '../pages/UnitPage';
 
 function Routes() {
   return (
@@ -19,6 +20,7 @@ function Routes() {
       <Route path="/building" component={Building} />
       <Route path="/development" component={floorsPage} />
       <Route path="/contact" component={ContactPage} />
+      <Route path="/unit/:floorId/:unitId" component={UnitPage} />
       <Route>404, Not Found!</Route>
     </Switch>
     </div>

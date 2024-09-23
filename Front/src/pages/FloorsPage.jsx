@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import fligthToTop from '../assets/Video/flight to top.mp4';
 import { HiOutlineX } from "react-icons/hi";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { fetchBuildData } from '../mock';
+import { fetchBuildData } from '../data/mock';
+import { useLocation } from 'wouter';
 
 const FloorsPage = () => {
     const [videoFinished, setVideoFinished] = useState(false);
     const [data, setData] = useState(null);
     const [floor, setFloor] = useState(1);
     const [selected, setSelected] = useState(null);
+    const [location, setLocation] = useLocation(); 
 
     useEffect(() => {
         fetchBuildData().then(data => {
@@ -78,18 +80,19 @@ const FloorsPage = () => {
                                                 cfloor.units.map(unit => (
                                                     <div key={unit.id} className='my-2 border-b-slate-200 border-b-[1px]'>
                                                         <img
-                                                            className='rounded-xl'
+                                                            className='rounded-xl cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg'
                                                             src={unit.img}
-                                                            alt=''
+                                                            alt={unit.name}
+                                                            onClick={() => setLocation(`/unit/${cfloor.id}/${unit.id}`)}
                                                         />
                                                         <h3 className='font-semibold mt-2'>{unit.name}</h3>
                                                         <h4 className='mb-2 text-slate-600'>{unit.category}</h4>
                                                     </div>
-                                                    ))
-                                            ): (
+                                                ))
+                                            ) : (
                                                 <h4 >No hay información de las unidades</h4>
-                                                )
-                                                
+                                            )
+
                                             }
 
                                         </span>
