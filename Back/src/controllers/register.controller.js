@@ -8,15 +8,10 @@ require("dotenv").config();
 registroController = async (req, res) => {
   try {
     //capturando datos de la request
-    const { firstName, lastName, email, password, role } = req.body;
+    const { nombre, apellido, email, password, rol } = req.body;
 
     //validacion de datos (validation.js)
-    const { isType, message } = validation(
-      firstName,
-      lastName,
-      email,
-      password
-    );
+    const { isType, message } = validation(nombre, apellido, email, password);
     //respuesta dinamica dependiedo del error
     if (isType === false) {
       return res.status(400).json({
@@ -36,6 +31,7 @@ registroController = async (req, res) => {
       return res.status(409).json({
         register: false,
         message: "El usuario ya existe, intenta iniciar sesion",
+        usuarioEncontrado: usuario,
         urlRedirectFront: "/login",
       });
     }
@@ -66,11 +62,11 @@ registroController = async (req, res) => {
 
     //creacion y guardado del usuario en BD
     const newUser = await Vendedor.create({
-      nombre: firstName,
-      apellido: lastName,
+      nombre: nombre,
+      apellido: apellido,
       email: email,
       password: hashedPass,
-      rol: role,
+      rol: rol,
       verificado: false,
     });
 
@@ -80,6 +76,7 @@ registroController = async (req, res) => {
       cuenta: "Cuenta sin verificar almacenada en la base de datos.",
       message:
         "Se envió un correo al email ingresado, da click sobre el enlace para validar tu cuenta",
+      usuarioGuardado: newUser,
       urlRedirectFront: "/register",
     });
   } catch (err) {
@@ -126,14 +123,11 @@ verificarCuenta = async (req, res) => {
     );
 
     //respuesta de exito
-    // res
-    //   .status(200)
-    //   .json({
-    //     message:
-    //       "Email verificado exitosamente!!, ya puede iniciar sesion con su nueva cuenta",
-    //     urlRedirectFront: "/login",
-    //   })
-    res.redirect("http://localhost:5173/login"); //redireccion al login
+    res.status(200).json({
+      message:
+        "Email verificado exitosamente!!, ya puede iniciar sesion con su nueva cuenta",
+      urlRedirectFront: "/login",
+    });
   } catch (error) {
     //respuesta de error
     res

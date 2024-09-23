@@ -1,12 +1,10 @@
 import Routes from "./routes/routes.jsx";
-import Layout from "./Layouts/Layout.jsx";
 
 function App() {
   return (
-    <Layout>
+    <div className="App">
       <Routes />
-    </Layout>
-
+    </div>
   );
 }
 
