@@ -47,12 +47,15 @@ const Register = () => {
 
     return (
         <div className="flex items-center justify-center h-screen w-screen bg-gray-200">
+
             <div className="flex w-3/4 bg-white shadow-md rounded-lg overflow-hidden">
+
                 <div className="w-1/2 bg-gray-300 flex items-center justify-center">
                     <div className="w-64 h-64 bg-gray-400 rounded-lg flex items-center justify-center">
                         <img src="your-image-url.png" alt="Imagen de demostración" />
                     </div>
                 </div>
+
                 <div className="w-1/2 p-10 flex flex-col items-center">
                     <form className="w-full" onSubmit={handleSubmit}>
                         <div className="mb-4">
@@ -144,7 +147,7 @@ const Register = () => {
                     </a>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
